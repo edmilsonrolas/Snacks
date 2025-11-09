@@ -1,0 +1,12 @@
+{% extends "menu/layout.html" %}
+
+{% block body %}
+    <h1>Seu Pedido</h1>
+    <ul>
+        {% for item in cart %}
+            <li>{{item.name}} - {{item.price}} MZN</li>
+        {% empty %}
+            <p>O carrinho está vazio.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

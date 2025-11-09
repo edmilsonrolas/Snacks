@@ -1,0 +1,14 @@
+{% extends "menu/layout.html" %}
+
+{% block body %}
+  <h1>Menu de Lanches</h1>
+  <ul>
+  {% for item in menu %}
+    <li>
+      {{ item.name }} - {{item.price}} MZN
+      <a href="{% url 'menu:add_to_cart' item.id %}">Adicionar</a>
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock %}
+
